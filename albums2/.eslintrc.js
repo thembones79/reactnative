@@ -1,5 +1,5 @@
 module.exports = {
-    "extends": "airbnb",
+    "extends": "rallycoding",
     "settings": {
         "import/resolver": {
           "node": {
