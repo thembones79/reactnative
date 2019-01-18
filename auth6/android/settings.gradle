@@ -1,0 +1,3 @@
+rootProject.name = 'auth6'
+
+include ':app'
