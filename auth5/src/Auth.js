@@ -8,7 +8,7 @@ class Auth extends Component {
     return (
       <View>
           <Header headerText="Authentication" />
-        <Text>dupa2</Text>
+        <Text>dupa2c</Text>
       </View>
     );
   }
