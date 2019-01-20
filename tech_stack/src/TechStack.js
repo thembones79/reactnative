@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-class TechStack extends React.Component {
+class TechStack extends React.Component{
     render(){
         return (
             <View>
