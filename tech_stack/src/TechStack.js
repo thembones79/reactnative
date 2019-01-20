@@ -1,16 +1,17 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React from "react";
+import { View, Text } from "react-native";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import reducers from './reducers';
 
-class TechStack extends React.Component{
-    render(){
-        return (
-            <View>
-                <Text>
-                    Dupa
-                </Text>
-            </View>
-        );
-    }
-}
+const TechStack = () => {
+  return (
+      <Provider store={createStore(reducers)}>
+    <View>
+      <Text>Dupa</Text>
+    </View>
+    </Provider>
+  );
+};
 
 export default TechStack;
