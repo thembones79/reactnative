@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import firebase from "firebase";
-import { Text, View } from "react-native";
+//import { Text, View } from "react-native";
 import reducers from "./reducers";
-import LoginForm from './components/LoginForm';
+import LoginForm from "./components/LoginForm";
 
 class Manager extends Component {
   componentWillMount() {
