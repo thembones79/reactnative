@@ -30,6 +30,7 @@ const RouterComponent = () => {
             key="employeeCreate"
             component={EmployeeCreate}
             title="Create Employee"
+            style={{backgroundColor: 'grey'}}
           />
         </Scene>
       </Scene>
