@@ -10,6 +10,7 @@ const RouterComponent = () => {
       <Scene key="root" hideNavBar>
         <Scene key="auth">
           <Scene
+            style={{ fontSize: 33 }}
             key="login"
             component={LoginForm}
             title="Please Log In"
@@ -30,7 +31,7 @@ const RouterComponent = () => {
             key="employeeCreate"
             component={EmployeeCreate}
             title="Create Employee"
-            style={{backgroundColor: 'grey'}}
+            style={{ backgroundColor: "grey" }}
           />
         </Scene>
       </Scene>
