@@ -9,7 +9,7 @@ class EmployeeCreate extends Component {
   onButtonPress() {
     const {name, phone, shift } = this.props;
 
-    this.props.EmployeeCreate({name, phone, shift});
+    this.props.employeeCreate({name, phone, shift});
 
   }
 
@@ -38,10 +38,10 @@ class EmployeeCreate extends Component {
           />
         </CardSection>
 
-        <CardSection style={{flexDirection: 'column'}}>
+        <CardSection style={{flexDirection: 'row'}}>
           <Text style={styles.pickerTextStyle}>Shift</Text>
           <Picker
-            style={{ flex: 1 }}
+            style={{ flex: 1}}
             selectedValue={this.props.shift}
             onValueChange={day =>
               this.props.employeeUpdate({ prop: "shift", value: day })
@@ -70,7 +70,7 @@ class EmployeeCreate extends Component {
 const styles = {
   pickerTextStyle: {
     fontSize: 18,
-    paddingLeft: 20
+    paddingLeft: 20,
   }
 }
 
