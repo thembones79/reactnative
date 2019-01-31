@@ -8,7 +8,7 @@ class ListItem extends Component {
 
     return (
       <CardSection>
-        <Text style={styles.titleStyle}>{name}dupa</Text>
+        <Text style={styles.titleStyle}>{name}</Text>
       </CardSection>
     );
   }
