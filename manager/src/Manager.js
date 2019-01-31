@@ -1,10 +1,23 @@
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import firebase from 'firebase';
+import React, { Component } from "react";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import firebase from "firebase";
+//import { Text, View } from "react-native";
 import ReduxThunk from 'redux-thunk';
-import reducers from './reducers';
-import Router from './Router';
+import reducers from "./reducers";
+import LoginForm from "./components/LoginForm";
+import RouterComponent from './Router';
+import { YellowBox } from 'react-native';
+import _ from 'lodash';
+
+YellowBox.ignoreWarnings(['Setting a timer']);
+const _console = _.clone(console);
+console.warn = message => {
+  if (message.indexOf('Setting a timer') <= -1) {
+    _console.warn(message);
+  }
+};
+
 
 class Manager extends Component {
   componentWillMount() {
@@ -18,13 +31,11 @@ class Manager extends Component {
     };
     firebase.initializeApp(config);
   }
-
   render() {
-    const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
-
+      const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
     return (
       <Provider store={store}>
-        <Router />
+        <RouterComponent />
       </Provider>
     );
   }
