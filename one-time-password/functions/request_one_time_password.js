@@ -28,6 +28,7 @@ module.exports = function(req, res) {
             .ref("users/" + phone)
             .update({ code: code, codeValid: true }, () => {
               res.send({ success: true });
+
             });
         }
       );
