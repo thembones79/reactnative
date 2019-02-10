@@ -3,12 +3,25 @@ import { View, Text } from "react-native";
 import { FormLabel, FormInput, Button } from "react-native-elements";
 
 class SignUpForm extends Component {
+  state = { phone: "" };
+
+  handleSubmit = () => {
+
+  }
+
   render() {
     return (
       <View>
-        <FormLabel>Enter Phone Number</FormLabel>
-        <FormInput />
-        <Button title="Submit" />
+        <View style={{ marginBottom: 10 }}>
+          <FormLabel>Enter Phone Number</FormLabel>
+          <FormInput 
+          value={this.state.phone}
+          onChangeText={phone => this.setState({phone: phone})}
+          />
+        </View>
+        <Button title="Submit" 
+        onPress={this.handleSubmit}
+        />
       </View>
     );
   }
