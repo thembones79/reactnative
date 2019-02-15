@@ -11,7 +11,8 @@ class ReviewScreen extends Component {
           title="Settings"
           onPress={() => navigation.navigate("settings")}
           icon={{ name: "code", color: "white" }}
-          buttonStyle={{backgroundColor: "red"}}
+          buttonStyle={{backgroundColor: "white"}}
+          type="clear"
         />
       ),
       style: {
