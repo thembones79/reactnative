@@ -8,7 +8,7 @@ class Slides extends Component {
   renderLastSlide(index) {
     if (index === this.props.data.length - 1) {
       return (
-        <Button title="Onwards!" raised={false} buttonStyle={styles.buttonStyle} />
+        <Button title="Onwards!" raised buttonStyle={styles.buttonStyle} />
       );
     }
   }
@@ -55,7 +55,7 @@ const styles = {
     marginTop: 15,
     width: SCREEN_WIDTH / 3,
     alignSelf: "center",
-    borderRadius: 20
+    flexShrink: 3
   }
 };
 

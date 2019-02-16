@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, ScrollView, Dimensions } from "react-native";
 import { Button } from "react-native-elements";
+import { LinearGradient } from 'expo';
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 
@@ -22,6 +23,18 @@ class Slides extends Component {
         >
           <Text style={styles.slideTextStyle}>{slide.text}</Text>
           {this.renderLastSlide(index)}
+          <LinearGradient
+            colors={['#4c669f', '#3b5998', '#192f6a']}
+            style={{ padding: 15, alignItems: 'center', borderRadius: 5 }}>
+            <Text
+              style={{
+                backgroundColor: 'transparent',
+                fontSize: 15,
+                color: '#fff',
+              }}>
+              Sign in with Facebook
+          </Text>
+          </LinearGradient>
         </View>
       );
     });
@@ -54,8 +67,7 @@ const styles = {
     backgroundColor: "#0288D1",
     marginTop: 15,
     width: SCREEN_WIDTH / 3,
-    alignSelf: "center",
-    borderRadius: 20
+    alignSelf: "center"
   }
 };
 

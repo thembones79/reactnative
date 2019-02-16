@@ -53,9 +53,8 @@ const styles = {
   buttonStyle: {
     backgroundColor: "#0288D1",
     marginTop: 15,
-    width: SCREEN_WIDTH / 3,
-    alignSelf: "center",
-    borderRadius: 20
+    width: SCREEN_WIDTH / 3, 
+    alignSelf: "center"
   }
 };
 

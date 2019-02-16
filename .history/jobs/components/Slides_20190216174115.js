@@ -18,7 +18,7 @@ class Slides extends Component {
       return (
         <View
           key={slide.text}
-          style={[styles.slideStyle, { backgroundColor: slide.color }]}
+          style={[styles.slideStyle, { background: slide.color }]}
         >
           <Text style={styles.slideTextStyle}>{slide.text}</Text>
           {this.renderLastSlide(index)}
@@ -54,8 +54,7 @@ const styles = {
     backgroundColor: "#0288D1",
     marginTop: 15,
     width: SCREEN_WIDTH / 3,
-    alignSelf: "center",
-    borderRadius: 20
+    alignSelf: "center"
   }
 };
 
