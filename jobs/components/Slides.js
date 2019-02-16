@@ -8,7 +8,12 @@ class Slides extends Component {
   renderLastSlide(index) {
     if (index === this.props.data.length - 1) {
       return (
-        <Button title="Onwards!" raised={false} buttonStyle={styles.buttonStyle} />
+        <Button
+          title="Onwards!"
+          raised={false}
+          buttonStyle={styles.buttonStyle}
+          onPress={this.props.onComplete}
+        />
       );
     }
   }
@@ -56,13 +61,13 @@ const styles = {
     width: SCREEN_WIDTH / 3,
     alignSelf: "center",
     borderRadius: 20,
-    shadowColor: "#000",
+    shadowColor: "blue",
     shadowOffset: {
       width: 0,
-      height: 12,
+      height: 12
     },
     shadowOpacity: 0.58,
-    shadowRadius: 16.00,
+    shadowRadius: 16.0,
 
     elevation: 44
   }
