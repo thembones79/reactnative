@@ -51,11 +51,20 @@ const styles = {
     textAlign: "center"
   },
   buttonStyle: {
-    backgroundColor: "#0288D1",
+    backgroundColor: "blue",
     marginTop: 15,
     width: SCREEN_WIDTH / 3,
     alignSelf: "center",
-    borderRadius: 20
+    borderRadius: 20,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.00,
+
+    elevation: 44
   }
 };
 
