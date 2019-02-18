@@ -36,7 +36,8 @@ const MainNavigator = createBottomTabNavigator(
     navigationOptions: {
       tabBarVisible: false
     },
-    lazy: true
+    lazy: true,
+    tabBarVisible: false
   }
 );
 
