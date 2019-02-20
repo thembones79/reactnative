@@ -34,10 +34,10 @@ const MainNavigator = createBottomTabNavigator(
   },
   {
     navigationOptions: {
-      tabBarVisible: false
+      tabBarOptions: { visible: false }
     },
-    lazy: true,
-    tabBarVisible: false
+
+    lazyLoad: true
   }
 );
 
