@@ -1,9 +1,19 @@
 import axios from  'axios';
 import reverseGeocode from 'latlng-to-zip';
+import qs from 'qs';
 
 import {
     FETCH_JOBS
 } from './types';
+
+const JOB_QUERY_PARAMS = {
+    publisher:'',
+    format :"1son",
+    v: '2',
+    latong: 1,
+    radius:10,
+    q: 'javascript'
+};
 
 export const fetchJobs = (region) => async (dispatch) => {
     try {
