@@ -1,8 +1,8 @@
-import {combineReducers} from 'redux';
-import auth from './auth_reducer';
-import jobs from './job_reducer';
+import { combineReducers } from "redux";
+import auth from "./auth_reducer";
+import jobs from "./job_reducer";
 
 export default combineReducers({
-    auth: auth,
-    jobs: jobs
+  auth: auth,
+  jobs: jobs
 });
