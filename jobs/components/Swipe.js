@@ -138,4 +138,4 @@ const styles = {
     }
 };
 
-export default Deck;
+export default Swipe;
