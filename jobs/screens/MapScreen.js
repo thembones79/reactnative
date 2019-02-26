@@ -2,11 +2,22 @@ import React, { Component } from "react";
 import { View, Text, ActivityIndicator } from "react-native";
 import { MapView } from "expo";
 import { connect } from 'react-redux';
-import { Button } from 'react-native-elements';
+import { Button, Icon } from 'react-native-elements';
 
 import * as actions from '../actions';
 
 class MapScreen extends Component {
+
+static navigationOptions = {
+  title: 'Map',
+  tabBar: {
+    icon: ({tintColor})=>{
+      return <Icon name="my-location" size={30} color={tintColor} />
+    }
+  }
+}
+
+
   state = {
     mapLoaded: false,
     region: {
@@ -50,7 +61,8 @@ class MapScreen extends Component {
           large
           title="Search This Area"
           backgroundColor="#009688"
-          icon={{name: 'search'}}
+            buttonStyle={{ backgroundColor: "#009688" }}
+          icon={{name: 'search', color: "white"}}
           onPress={this.onButtonPress}
           />
         </View>
@@ -63,8 +75,8 @@ const styles = {
   buttonContainer: {
     position: 'absolute',
     bottom: 20,
-    left: 5,
-    right: 5
+    left: 50,
+    right: 50
   }
 };
 

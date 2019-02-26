@@ -1,6 +1,6 @@
 import axios from "axios";
 import { geo2zip } from "geo2zip";
-import { FETCH_JOBS } from "./types";
+import { FETCH_JOBS, LIKE_JOB, CLEAR_LIKED_JOBS } from "./types";
 
 export const fetchJobs = (region, callback) => {
   return async dispatch => {
@@ -14,4 +14,17 @@ export const fetchJobs = (region, callback) => {
       // console.log(data);
     } catch (error) {}
   };
+};
+
+
+export const likeJob = (job) => {
+  return {
+    type: LIKE_JOB,
+    payload: job
+  };
+};
+
+
+export const clearLikedJobs = () => {
+  return {type: CLEAR_LIKED_JOBS};
 };

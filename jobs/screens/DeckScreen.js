@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { MapView } from "expo";
 import { Card, Button } from "react-native-elements";
 import Swipe from "../components/Swipe";
+import * as actions from '../actions';
 
 class DeckScreen extends Component {
   renderCard(job) {
@@ -30,17 +31,28 @@ class DeckScreen extends Component {
     );
   }
 
-  renderNoMoreCards() {
-    return <Card title="No more jobs" />;
+  renderNoMoreCards = () => {
+    return (
+    <Card title="No More Jobs">
+      <Button
+      title="Back To Map"
+      large
+      icon={{name: 'my-location', color: "white"}}
+      onPress={()=> this.props.navigation.navigate('map')}
+
+      />
+    </Card>
+    );
   }
 
   render() {
     return (
-      <View>
+      <View style={{marginTop: 10}}>
         <Swipe
           data={this.props.jobs}
           renderCard={this.renderCard}
           renderNoMoreCards={this.renderNoMoreCards}
+          onSwipeRight={job => this.props.likeJob(job)}
           keyProp="jobkey"
         />
       </View>
@@ -60,4 +72,4 @@ function mapStateToProps({ jobs }) {
   return { jobs: jobs.results };
 }
 
-export default connect(mapStateToProps)(DeckScreen);
+export default connect(mapStateToProps, actions)(DeckScreen);
