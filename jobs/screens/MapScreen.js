@@ -17,15 +17,15 @@ static navigationOptions = {
 }
 
 
-  state = {
-    mapLoaded: false,
-    region: {
-      longitude: -122,
-      latitude: 37,
-      longitudeDelta: 0.04,
-      latitudeDelta: 0.09
-    }
-  };
+state = {
+  mapLoaded: false,
+  region: {
+    longitude: -122,
+    latitude: 37,
+    longitudeDelta: 0.04,
+    latitudeDelta: 0.09
+  }
+};
 
   componentDidMount() {
     this.setState({ mapLoaded: true });

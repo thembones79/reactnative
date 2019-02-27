@@ -7,6 +7,7 @@ import {
 } from "react-navigation";
 import { Provider } from "react-redux";
 
+import registerForNotifications from  './services/push_notifications';
 import store from "./store";
 import AuthScreen from "./screens/AuthScreen";
 import WelcomeScreen from "./screens/WelcomeScreen";
@@ -30,6 +31,8 @@ const MainNavigator = createBottomTabNavigator(
           })
         }
       },{
+        tabBarPosition: 'bottom',
+        swipeEnabled: false,
         tabBarOptions:{
           labelStyle: {fontSize: 12}
         }
@@ -47,12 +50,19 @@ const MainNavigator = createBottomTabNavigator(
 
 const Jobs = createAppContainer(MainNavigator);
 
-const App = () => {
+class App extends React.Component {
+
+  componentDidMount() {
+    registerForNotifications();
+  }
+
+  render(){
   return (
     <Provider store={store}>
       <Jobs />
     </Provider>
   );
+  }
 };
 
 export default App;
