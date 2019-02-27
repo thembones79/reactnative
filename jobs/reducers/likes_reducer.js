@@ -1,5 +1,5 @@
 import _ from "lodash";
-import { REHYDRATE } from "redux-persist/constants";
+import { REHYDRATE } from "redux-persist/lib/constants";
 import { LIKE_JOB, CLEAR_LIKED_JOBS } from "../actions/types";
 const INITIAL_STATE = [];
 

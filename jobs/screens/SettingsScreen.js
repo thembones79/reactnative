@@ -3,7 +3,7 @@ import {View, Text, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
-import { platform } from 'os';
+
 
 class SettingsScreen extends Component {
     static navigationOptions = {
